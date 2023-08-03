@@ -1,64 +1,95 @@
 #sidebar {
-    width: 300px;
-    height: 100vh;
-    background-color: lightgrey;
-    z-index: 1;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  background-color: #F1F1FB;
+  border-right: 1px solid;
+}
+
+
+#sidebar a {
+  text-decoration: none;
+  color: grey;
+  font-weight: bold;
+}
+
+#sidebar a:hover {
+  color: black;
+}
+
+.nav-link-container {
+  display: flex;
+  margin: 20px auto;
+  width: 150px;
+  justify-content: left;
+  align-items: center;
+}
+
+.nav-link-container p {
+  margin: 0 5px;
+  font-size: 20px;
+}
+
+.sidebar-icon {
+  height: 25px;
 }
 
 #hamburger {
-    display: none;
+  display: none;
 }
 
 #close {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 800px) {
+  #sidebar {
+    position: relative;
+    border: none;
+  }
 
-    #sidebar {
-        position: relative;
-    }
+  #hamburger {
+    display: block;
+    width: 0;
+    border: 0;
+    padding: 0;
+  }
 
-    #hamburger {
-        display: block;
-        width: 0;
-        border: 0;
-        padding: 0;
-    }
+  #hamburger:hover {
+    cursor: pointer;
+  }
 
-    #hamburger:hover {
-        cursor: pointer;
-    }
+  #hamburger-img {
+    padding: 20px;
+    width: 30px;
+  }
 
-    #hamburger-img {
-        padding: 20px;
-        width: 30px;
-    }
+  #close {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 0;
+    padding: 0;
+    border: none;
+  }
 
-    #close {
-        display: block;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        height: 0;
-        padding: 0;
-        border: none;
-    }
+  #close-img {
+    width: 30px;
+  }
 
-    #close-img {
-        width: 30px;
-    }
+  #close-img:hover {
+    cursor: pointer;
+  }
 
-    #close-img:hover {
-        cursor: pointer;
-    }
+  .hidden {
+    display: none;
+  }
 
-    .hidden {
-        display: none;
-    }
-
-    .open {
-        display: block;
-    }
-
+  .open {
+    display: block;
+  }
 }
