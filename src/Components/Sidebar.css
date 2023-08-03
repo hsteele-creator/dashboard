@@ -1,14 +1,10 @@
 #sidebar {
   width: 300px;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  background-color: #F1F1FB;
+  background-color: #f1f1fb;
   border-right: 1px solid;
+  position: relative;
 }
-
 
 #sidebar a {
   text-decoration: none;
@@ -20,16 +16,27 @@
   color: black;
 }
 
+#nav-links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .nav-link-container {
   display: flex;
-  margin: 20px auto;
-  width: 150px;
+  width: 160px;
   justify-content: left;
   align-items: center;
+  margin: 20px 0;
 }
 
 .nav-link-container p {
-  margin: 0 5px;
+  margin: 0 10px;
   font-size: 20px;
 }
 
@@ -46,6 +53,7 @@
 }
 
 @media screen and (max-width: 800px) {
+
   #sidebar {
     position: relative;
     border: none;
