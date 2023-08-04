@@ -1,11 +1,13 @@
 import React from "react";
+import Sidebar from "./Sidebar";
 
 const Summary = () => {
-    return (
-        <>
-        <h1>Summary</h1>
-        </>
-    )
-}
+  return (
+    <>
+      <Sidebar />
+      <h1>Summary</h1>
+    </>
+  );
+};
 
-export default Summary
+export default Summary;

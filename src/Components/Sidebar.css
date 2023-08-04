@@ -1,19 +1,22 @@
 #sidebar {
-  width: 300px;
+  width: 250px;
   height: 100vh;
   background-color: #f1f1fb;
-  border-right: 1px solid;
+  /* border-right: 1px solid; */
   position: relative;
+  /* background-color:   #292DA3;   */
+  background-color: #005BEC;
 }
 
 #sidebar a {
   text-decoration: none;
-  color: grey;
+  color: grey;  
+  color: white;
   font-weight: bold;
 }
 
 #sidebar a:hover {
-  color: black;
+  color: navy;
 }
 
 #nav-links-container {
@@ -37,11 +40,11 @@
 
 .nav-link-container p {
   margin: 0 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .sidebar-icon {
-  height: 25px;
+  height: 22px;
 }
 
 #hamburger {
@@ -57,13 +60,17 @@
   #sidebar {
     position: relative;
     border: none;
+    position: fixed;
   }
 
   #hamburger {
     display: block;
-    width: 0;
+    /* width: 0;
     border: 0;
+    padding: 0; */
     padding: 0;
+    background-color: white;
+    border: none;
   }
 
   #hamburger:hover {
@@ -73,6 +80,8 @@
   #hamburger-img {
     padding: 20px;
     width: 30px;
+    position: fixed;
+    top: 0px;
   }
 
   #close {
@@ -87,6 +96,9 @@
 
   #close-img {
     width: 30px;
+    position: absolute;
+    top: 5px;
+    right: 1px;
   }
 
   #close-img:hover {

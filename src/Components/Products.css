@@ -1,0 +1,31 @@
+#main-products-container {
+    display: flex;
+}
+
+#products-container {
+    margin: 0 auto;
+}
+
+/* #products-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    #products-container {
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1050px) {
+    #products-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 1051px) {
+    #products-container {
+        grid-template-columns: auto auto auto auto;
+    }
+} */

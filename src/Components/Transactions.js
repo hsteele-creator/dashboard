@@ -1,11 +1,13 @@
 import React from "react";
+import Sidebar from "./Sidebar";
 
 const Transactions = () => {
-    return (
-        <>
-        <h1>Transactions</h1>
-        </>
-    )
-}
+  return (
+    <>
+      <Sidebar />
+      <h1>Transactions</h1>
+    </>
+  );
+};
 
-export default Transactions
+export default Transactions;

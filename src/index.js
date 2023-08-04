@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Sidebar />
+
       <Routes>
         <Route path="/" element={<Summary />} />
         <Route path="/Products" element={<Products />} />
