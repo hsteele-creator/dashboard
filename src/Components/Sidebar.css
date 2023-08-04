@@ -6,6 +6,7 @@
   position: relative;
   /* background-color:   #292DA3;   */
   background-color: #005BEC;
+  border-radius: 0 0 20px 0;
 }
 
 #sidebar a {
@@ -61,6 +62,7 @@
     position: relative;
     border: none;
     position: fixed;
+    border-radius: 0;
   }
 
   #hamburger {
