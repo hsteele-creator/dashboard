@@ -18,8 +18,8 @@ const Orders = () => {
 
         <div id="orders-container">
           <div id="input-container">
-            <input type="text" onChange={(e) =>setSearch(e.target.value)}></input>
-            <button>Search</button>
+            <input type="text" value={search} onChange={(e) =>setSearch(e.target.value)} placeholder="Search By Name"></input>
+            <button onClick={() => setSearch("")}>Reset</button>
           </div>
           {orders.filter((name) => {
             return search.toLowerCase() === "" ? name : name.product.toLowerCase().includes(search)
