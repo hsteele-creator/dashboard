@@ -20,9 +20,9 @@ const Products = () => {
 
         <div id="products-container">
           <div id="filter-container" onChange={(e) => handleFilter(e)}>
-            <label for="filter-select">Filter By :</label>
+            <label for="filter-select">Filter By : </label>
             <select id="filter-select">
-              <option></option>
+              <option>Select:</option>
               <option>Orders (Lowest to Highest)</option>
               <option>Orders (Highest to Lowest)</option>
               <option>Sales (Lowest to Highest)</option>

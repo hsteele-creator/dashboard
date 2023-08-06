@@ -8,14 +8,30 @@
 
 #filter-container {
     height: 70px;
-    background-color: #005BEC;
+    /* background-color: #005BEC; */
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0 0 16px 16px;
+    border-radius: 0;
+    /* border-bottom: 1px solid; */
 }
 
 #filter-container label {
-    color: white;
+    color: #005BEC;
     font-weight: bold;
+}
+
+#filter-container select {
+    padding: 4px;
+    border: none;
+    border-radius: 6px;
+    margin-left: 10px;
+    background-color: #005BEC;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    #filter-container {
+        width: 100vw;
+    }
 }

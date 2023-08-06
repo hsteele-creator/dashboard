@@ -11,7 +11,7 @@ const Product = ({ name, image, orders, sales }) => {
           <span>Orders</span> : {orders}
         </p>
         <p>
-          <span>Total Sales</span> : {sales}
+          <span>Total Sales</span> : ${sales},000
         </p>
       </div>
     </>
