@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const Products = () => {
   const products = useSelector((store) => store.Products);
+  console.log(products)
   const dispatch = useDispatch();
 
   const handleFilter = (e) => {
