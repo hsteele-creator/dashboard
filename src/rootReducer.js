@@ -42,12 +42,15 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         };
       }
     case "FILTER ORDERS":
+      const orders = [...state.Orders];
+
+      if (action.payload.name === "") return state;
       return {
         ...state,
         Orders: [
-          ...state.Orders.filter((order) =>
-            order.name.includes(action.payload.name)
-          ),
+          ...state.Orders.filter((order) => {
+            return order.product.toLowerCase().includes(action.payload.name);
+          }),
         ],
       };
   }
