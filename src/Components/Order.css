@@ -1,0 +1,42 @@
+.order-container {
+    display: flex;
+    /* background-color: green; */
+    justify-content: space-evenly;
+    width: 90%;
+    align-items: center;
+    max-width: 1000px;
+    height: 60px;
+    margin: 0 auto;
+    border-bottom: 0.2px solid grey;
+    padding: 10px 0;
+}
+
+.order-container p {
+    width: 15%;
+}
+
+.order-number {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.order-product {
+    color: lightslategrey;
+    font-size: 12px;
+}
+
+.order-date {
+    font-size: 12px;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.green {
+    color: #2DB086;
+    font-weight: bold;
+    font-size: 12px;
+}

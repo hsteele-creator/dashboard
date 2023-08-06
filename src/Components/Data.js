@@ -8,59 +8,59 @@ import remotecar from "./remotecar.webp";
 import heatedblanket from "./heatedblanket.jpeg";
 
 const Data = {
-  "recent orders": [
+  Orders: [
     {
       orderNumber: 123456,
       product: "Tv Monitor",
-      data: "aug 7 2023",
+      date: "Aug 7 2023",
       delivered: true,
     },
     {
       orderNumber: 615782,
       product: "Iphone",
-      data: "aug 6 2023",
+      date: "Aug 6 2023",
       delivered: true,
     },
     {
       orderNumber: 892839,
       product: "Headphones",
-      data: "aug 4 2023",
+      date: "Aug 4 2023",
       delivered: false,
     },
     {
       orderNumber: 893746,
       product: "Heated Blanket",
-      data: "aug 3 2023",
+      date: "Aug 3 2023",
       delivered: true,
     },
     {
       orderNumber: 142635,
       product: "Massage Chair",
-      data: "aug 3 2023",
+      date: "Aug 3 2023",
       delivered: false,
     },
     {
       orderNumber: 837472,
       product: "Hover Drone",
-      data: "aug 1 2023",
+      date: "Aug 1 2023",
       delivered: true,
     },
     {
       orderNumber: 468272,
       product: "Alarm clock",
-      data: "july 27 2023",
+      date: "July 27 2023",
       delivered: true,
     },
     {
       orderNumber: 827261,
       product: "Air Mattress",
-      data: "july 26 2023",
+      date: "July 26 2023",
       delivered: false,
     },
     {
       orderNumber: 927372,
       product: "Remote Control Car",
-      data: "july 26 2023",
+      date: "July 26 2023",
       delivered: true,
     },
   ],

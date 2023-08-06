@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Products from "./Components/Products";
 import Summary from "./Components/Summary";
 import Statistics from "./Components/Statistics";
-import Transactions from "./Components/Transactions";
+import Orders from "./Components/Orders";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./rootReducer";
@@ -22,7 +22,7 @@ root.render(
           <Route path="/" element={<Summary />} />
           <Route path="/Products" element={<Products />} />
           <Route path="/Statistics" element={<Statistics />} />
-          <Route path="/Transactions" element={<Transactions />} />
+          <Route path="/orders" element={<Orders />} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>

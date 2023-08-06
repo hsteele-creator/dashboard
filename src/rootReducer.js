@@ -41,6 +41,15 @@ const rootReducer = (state = INITIAL_STATE, action) => {
           ],
         };
       }
+    case "FILTER ORDERS":
+      return {
+        ...state,
+        Orders: [
+          ...state.Orders.filter((order) =>
+            order.name.includes(action.payload.name)
+          ),
+        ],
+      };
   }
 
   return state;

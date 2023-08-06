@@ -34,10 +34,10 @@ const Sidebar = () => {
               <p>Statistics</p>
             </div>
           </NavLink>
-          <NavLink to="/transactions">
+          <NavLink to="/orders">
             <div className="nav-link-container">
               <img src={transaction} className="sidebar-icon" />
-              <p>Transactions</p>
+              <p>Orders</p>
             </div>
           </NavLink>
           <NavLink to="/products">
