@@ -6,9 +6,7 @@ import "./Orders.css";
 import { useState } from "react";
 
 const Orders = () => {
-  const orders = useSelector((state) => state.Orders);
-  const dispatch = useDispatch();
-  const [search, setSearch] = useState("")
+  const orders = useSelector((state) => state.Orders);  const [search, setSearch] = useState("")
 
 
   return (
