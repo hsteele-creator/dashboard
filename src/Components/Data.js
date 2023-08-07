@@ -114,6 +114,43 @@ const Data = {
       image: heatedblanket,
     },
   ],
+  ChartData :[
+    {
+      id: 1,
+      year : 2019,
+      sales : 10000,
+      customersGained : 1200,
+      customersLost : 200
+    },
+    {
+      id: 2,
+      year : 2020,
+      sales : 15000,
+      customersGained : 1700,
+      customersLost : 180
+    },
+    {
+      id: 3,
+      year : 2021,
+      sales : 25000,
+      customersGained : 1800,
+      customersLost : 150
+    },
+    {
+      id: 4,
+      year : 2022,
+      sales : 32000,
+      customersGained : 2000,
+      customersLost : 125
+    },
+    {
+      id: 5,
+      year : 2023,
+      sales : 40000,
+      customersGained : 2500,
+      customersLost : 100
+    }
+  ]
 };
 
 export default Data;

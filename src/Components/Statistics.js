@@ -1,66 +1,95 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import "./Statistics.css";
+import BarChart from "./BarChart";
 import { useSelector } from "react-redux";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Tooltip,
-  Legend,
-  ArcElement,
-} from "chart.js";
-import { Bar, Pie, Line } from "react-chartjs-2";
-
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
-ChartJS.register(ArcElement, Tooltip, Legend);
-ChartJS.register(ArcElement, Tooltip, Legend);
+import LineChart from "./LineChart";
+import PieChart from "./PieChart"
 
 const Statistics = () => {
-  const data = useSelector((state) => state.Products);
-  const chartData = {
-    labels: data.map((product) => product.name),
+  const chartData = useSelector((state) => state.ChartData);
+  const barChartData = {
+    labels: chartData.map((item) => item.year),
     datasets: [
       {
-        label: "Sales (Dollars)",
-        data: data.map((product) => product.sales),
-        backgroundColor: "#005BEB",
-        title: "Price",
-        borderRadius: 3,
-        categoryPercentage: 0.75,
-        responsive: true,
+        label: "Sales By Year (dollars)",
+        data: chartData.map((item) => item.sales),
+        backgroundColor: [
+          "#155263",
+          "#ff6f3c",
+          "#ff9a3c",
+          "#ffc93c",
+          "#00bbf0",
+        ],
+        borderColor: "black",
+        borderWidth: 2,
+      },
+    ],
+  };
+
+  const lineChartData = {
+    labels: chartData.map((item) => item.year),
+    datasets: [
+      {
+        label: "Customers Gained By Year",
+        data: chartData.map((item) => item.customersGained),
+        backgroundColor: [
+          "#155263",
+          "#ff6f3c",
+          "#ff9a3c",
+          "#ffc93c",
+          "#00bbf0",
+        ],
+        borderColor: "black",
+        borderWidth: 2,
       },
     ],
   };
 
   const pieChartData = {
-    labels: data.map((product) => product.name),
+    labels: chartData.map((item) => item.year),
     datasets: [
       {
-        data: data.map((product) => product.sales),
-        backgroundColor: ["03045e", "023e8a", "0077b6", "0096c7", "c00b4d8", "48cae4", "90e0ef", "2b2d42"],
+        label: "Customers Lost By Year",
+        data: chartData.map((item) => item.customersLost),
+        backgroundColor: [
+          "#155263",
+          "#ff6f3c",
+          "#ff9a3c",
+          "#ffc93c",
+          "#00bbf0",
+        ],
+        borderColor: "black",
+        borderWidth: 2,
       },
     ],
   };
 
-  const options = {};
+
+
   return (
-    <>
-      <div id="statistics-main">
-        <Sidebar />
-        <div id="charts-container">
-        <div id="bar-chart-container">
-          <Bar data={chartData} />
-        </div>
-        <div id="pie-chart-container">
-          <Pie data={pieChartData} options={options} />
-          <p>Sales (Dollars) By Product</p>
-          {/* <Line data={pieChartData} /> */}
-        </div>
+    <div id="statistics-main">
+      <Sidebar />
+
+      <div id="charts-container">
+        <div id="barchart-container">
+          <BarChart chartData={barChartData} />
+
+          <div id="other-charts-container">
+
+            <div id="line-chart-container">
+            <LineChart chartData={lineChartData} />
+            </div>
+
+
+            <div id="pie-chart-container">
+            <PieChart chartData={pieChartData} />
+            </div>
+
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
